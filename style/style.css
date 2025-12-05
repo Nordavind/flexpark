@@ -70,6 +70,13 @@ h3.white {
   color: var(--white-color);
 }
 
+h3.proyectos-d {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  color: var(--primary-color);
+}
+
 /* parrafos */
 p {
   font-weight: 400;
@@ -114,6 +121,7 @@ a:hover {
   color: var(--white-color);
   font-size: 16px;
   line-height: 16px;
+  text-align: center;
   border: none;
   border-radius: var(--border-radius-pill);
   cursor: pointer;
@@ -134,6 +142,14 @@ a:hover {
   color: var(--white-color);
   background-color: transparent;
   border-color: var(--white-color);
+}
+
+.button.color-a {
+  background-color: var(--primary-color);
+}
+
+.button.color-a:hover {
+  background-color: var(--black-color);
 }
 
 /* utilidades formato */
@@ -160,6 +176,11 @@ a:hover {
   padding-inline: var(--spacing-medium);
   margin-inline: auto;
   width: 100%;
+}
+
+.container-small {
+  width: 90%;
+  margin-inline: auto;
 }
 
 /* layouts dos columnas */
@@ -448,6 +469,49 @@ a:hover {
   max-width: 80%;
 }
 
+/* proyectos disponibles */
+.proyectos-d-title-wrapper-a {
+  padding-bottom: 20px;
+  text-align: center;
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.proyectos-d-grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.proyectos-d-card {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.proyectos-d-card-content {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+
+.proyectos-d-card img {
+  width: 100%;
+}
+
+.proyectos-list {
+  margin-left: 20px;
+  padding-left: 0px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.proyectos-list li {
+  margin-bottom: 10px;
+}
+
 /* media queries */
 @media (max-width: 959.98px) {
   #navbarDesktop {
@@ -457,6 +521,17 @@ a:hover {
   #navbarMobile {
     display: block;
   }
+
+  .container-small {
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .proyectos-d-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
 }
 
 @media (max-width: 767.98px) {
@@ -511,6 +586,11 @@ a:hover {
   .service-h-map-text-item h3 {
     font-size: 18px;
     line-height: 28px;
+  }
+
+  .proyectos-d-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 60px;
   }
 }
 
@@ -605,5 +685,10 @@ a:hover {
 
   .service-h-map-text-item.short {
     max-width: 100%;
+  }
+
+  .proyectos-d-grid {
+    grid-template-columns: 1fr;
+    row-gap: 60px;
   }
 }

@@ -16,4 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       toggleNavBar(navbar, hambLink);
     }
   });
+
+  // auto-date
+  document.getElementById('current-year').textContent = new Date().getFullYear();
 });

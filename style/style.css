@@ -6,6 +6,7 @@
   --black-color: #000000;
   --white-color: #ffffff;
   --gray-color: #4E4D4D;
+  --light-gray-color: #F9F9F9;
   /* vars */
   --transition-smooth: 0.3s ease-in-out;
   --border-radius-pill: 100px;
@@ -49,6 +50,13 @@ h1.first-fold {
   color: var(--white-color);
 }
 
+h1.inner-sec-h1 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 35px;
+  margin-bottom: 0px;
+}
+
 h2 {
   font-weight: 600;
   font-size: 30px;
@@ -86,6 +94,10 @@ p {
 
 p.white {
   color: var(--white-color);
+}
+
+p.gray {
+  color: var(--gray-color);
 }
 
 p.text-display {
@@ -179,6 +191,10 @@ a:hover {
   margin-bottom: var(--spacing-xl);
 }
 
+.mb-inner {
+  margin-bottom: var(--spacing-large);
+}
+
 .pos-rel {
   position: relative;
   z-index: 1;
@@ -197,7 +213,7 @@ a:hover {
   margin-inline: auto;
 }
 
-/* layouts dos columnas */
+/* layouts */
 .two-col-container-a {
   display: flex;
   flex-flow: row nowrap;
@@ -207,6 +223,12 @@ a:hover {
 
 .two-col-item {
   width: 50%;
+}
+
+.flex-col-base {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--spacing-small);
 }
 
 /* imagenes */
@@ -228,11 +250,38 @@ a:hover {
   pointer-events: none;
 }
 
+.ornament-b {
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.ornament-c {
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/* titles */
 .title-section-a {
   display: flex;
   flex-direction: column;
   gap: 20px;
   max-width: 540px;
+}
+
+.title-section-b {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .title-wrapper {
@@ -281,6 +330,10 @@ a:hover {
   transition: color var(--transition-smooth);
   text-decoration: none;
   color: var(--black-color);
+}
+
+.nav-link.active {
+  color: var(--secondary-color);
 }
 
 .nav-link.white {
@@ -682,10 +735,91 @@ a:hover {
   padding-top: 5px;
 }
 
+/* subfooter */
 .sub-footer-wrapper {
   margin-top: var(--spacing-large);
   padding-block: var(--spacing-small);
   border-top: 1px solid #a7aabd5e;
+}
+
+/* nosotros */
+.nosotros-img {
+  max-width: 1260px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mision-img-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: end;
+}
+
+.vision-img-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+}
+
+.mision-img,
+.vision-img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 1;
+}
+
+.mision-img {
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+
+.vision-img {
+  padding-left: 40px;
+  padding-bottom: 40px;
+}
+
+
+/* directorio */
+.directorio-container {
+  padding: 80px 40px;
+  background-color: var(--light-gray-color);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.directorio-l {
+  max-width: 30%;
+}
+
+.directorio-r {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  row-gap: 80px;
+}
+
+.directorio-nombre,
+.directorio-cargo {
+  font-size: 22px;
+  line-height: 30px;
+  color: var(--gray-color);
+}
+
+.directorio-nombre {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.directorio-cargo {
+  font-weight: 300;
+  line-height: 24px;
+  color: var(--secondary-color);
 }
 
 /* media queries */
@@ -706,6 +840,19 @@ a:hover {
   .proyectos-d-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+  }
+
+  .directorio-container {
+    flex-flow: column nowrap;
+    gap: 40px;
+  }
+
+  .directorio-l {
+    max-width: 100%;
+  }
+
+  .directorio-r {
+    width: 100%;
   }
 }
 
@@ -795,6 +942,17 @@ a:hover {
   .footer-item:nth-child(2) {
     max-width: 100%;
   }
+
+  .directorio-container {
+    flex-flow: column nowrap;
+    gap: 40px;
+  }
+
+  .directorio-r {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 60px;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -825,6 +983,10 @@ a:hover {
 
   .two-col-item {
     width: 100%;
+  }
+
+  .flex-dn {
+    order: 2;
   }
 
   .first-fold-container {
@@ -906,5 +1068,14 @@ a:hover {
 
   .footer-container {
     padding-inline: var(--spacing-small);
+  }
+
+  .directorio-container {
+    padding: 60px 20px;
+  }
+
+  .directorio-r {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
   }
 }

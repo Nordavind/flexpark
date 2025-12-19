@@ -23,7 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // glightbox
   if (typeof GLightbox === 'function') {
     GLightbox({
-      selector: '.glightbox'
+      selector: '.glightbox',
+      closeOnOutsideClick: true
     });
   }
 });

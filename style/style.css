@@ -963,6 +963,10 @@ a:hover {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
 }
 
+
+
+
+
 /* proyectos */
 .proyectos-cta-wrapper {
   background-image: url('../img/services-ff-bg.webp');
@@ -1006,7 +1010,6 @@ a:hover {
 .project-img:hover {
   opacity: 90%;
 }
-
 
 .project-dn {
   margin-top: 10px;
@@ -1064,6 +1067,10 @@ a:hover {
   .ornament-e {
     width: 95px;
     height: 113px;
+  }
+
+  .project-ornament-a {
+    display: none;
   }
 
   .proyectos-d-grid {
@@ -1187,6 +1194,44 @@ a:hover {
     max-width: 300px;
     height: auto;
     padding: 40px 20px;
+  }
+
+  .project-up {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .project-up-left {
+    width: 100%;
+  }
+
+  .project-up-right {
+    width: 100%;
+  }
+
+  .project-dn {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .project-dn-left {
+    width: 100%;
+    height: 400px;
+    order: 2;
+  }
+
+  .project-dn-right {
+    width: 100%;
+    align-items: normal;
+  }
+
+  .project-gal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

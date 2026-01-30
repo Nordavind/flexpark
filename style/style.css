@@ -335,6 +335,12 @@ a:hover {
 }
 
 /* header navbar */
+header {
+  background-color: var(--white-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 .navbar-wrapper {
   display: flex;
   justify-content: space-between;
@@ -665,7 +671,8 @@ line-height: 25px;
 
 .map-wrapper,
 .form-wrapper {
-  width: 50%;
+  /* width: 50%; */
+  width: 100%;
 }
 
 .form-wrapper {
